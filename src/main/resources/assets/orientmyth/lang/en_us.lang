@@ -1,0 +1,10 @@
+itemGroup.orientmyth.core=Orientmyth(CoreCore)
+itemGroup.orientmyth.herbal=Orientmyth(Plant Soul)
+
+tile.orientmyth.oreCore0.name=Copper oreCore
+tile.orientmyth.oreCore1.name=Zinc oreCore
+tile.orientmyth.oreCore2.name=Tin oreCore
+tile.orientmyth.oreCore3.name=Silver oreCore
+tile.orientmyth.oreCore4.name=Cinnabar oreCore
+tile.orientmyth.oreCore5.name=Sulphur oreCore
+tile.orientmyth.oreCore6.name=Jade oreCore

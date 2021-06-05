@@ -1,0 +1,63 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url = "http://files.minecraftforge.net/maven" }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+version = mod_version
+group = "com.fox.ancinentchina.core" 
+archivesBaseName = "ancinentchina"
+
+sourceCompatibility = targetCompatibility = '1.8' 
+compileJava {
+    sourceCompatibility = targetCompatibility = '1.8'
+}
+
+minecraft {
+    version = "1.12.2-14.23.5.2847"
+    runDir = "run"
+    mappings = "stable_39"
+    
+    
+    replace "@version@", project.version
+}
+
+repositories {
+    mavenCentral()
+    maven { url = "http://maven.thiakil.com" }
+    maven { url 'https://maven.mcmoddev.com' }
+}
+
+dependencies {
+    deobfCompile "com.azanor.baubles:Baubles:1.12-1.5.2" 
+    compile "net.darkhax.bookshelf:Bookshelf-1.12.2:2.2.494"
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+                
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+idea{module{inheritOutputDirs = true}}
+runClient {
+    if (project.hasProperty("appArgs")) {
+        args Eval.me(appArgs)
+    }
+}
+

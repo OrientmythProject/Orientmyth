@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "orientmyth",
+    "name": "Orientmyth",
+    "description": "Orientmyth is a mod which tell the mysterious oriental legends of long ago.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["cyciling", "ajacker", "yaesey", "Gu_ZT"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
