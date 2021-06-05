@@ -1,4 +1,4 @@
-BUILD=randomtweaker
+BUILD=orientmyth
 VERSION=1.0.0
 
 FILE_NAME="$BUILD-$VERSION.jar"
